@@ -1031,9 +1031,9 @@ body {
 }
 
 .model-form-checkbox-input:checked + .item-checked {
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
     background-color: rgba(33, 150, 243, 1);
     background-image: url('../images/check-mark.svg');
     background-size: contain;
