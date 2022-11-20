@@ -375,12 +375,24 @@
                         </ul>
                 </li>
                 <li>
-                    <p class="mail-text">приєднуйтесь</p>
-                    <form name="sign-up-mail" autocomplete="on"> 
-                        <label> 
-                            <input type="email" name="email" />
+                    <p class="email-text">приєднуйтесь</p>
+                    <form class="email-form" name="sign-up-mail" autocomplete="on"> 
+                        <label for="sign-email"> 
+                            <input 
+                            class="sign-email-input" 
+                            type="email" 
+                            name="sign-email" 
+                            id="sign-email"
+                            placeholder="E-mail"/>
                         </label>
-                        <button class="button button-flex" type="submit">Підписатися</button>
+                        <button class="sign-email-button " type="submit">
+                            <span class="sign-email-text">
+                            Підписатися
+                            </span>
+                            <svg width="24" height="24" class="sign-email-button-icon">
+                                <use href="./images/icons.svg#icon-icon-send"></use>
+                            </svg>
+                        </button>
                     </form>
                 </li>
             </ul>
@@ -395,6 +407,58 @@
                 </svg>
             </div>
             </button>
+            <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+            <form class="modal-form" name="modal-form" autocomplete="on"> 
+                <label class="model-form-label" for="person-name">Ім'я</label>
+                <div class="model-form-control">
+                    <input 
+                    class="modal-form-input" 
+                    type="text" 
+                    name="person-name"
+                    id="person-name"/>
+                    <svg width="12" height="12" class="modal-form-icon">
+                        <use href="./images/icons.svg#icon-person-black"></use>
+                    </svg>
+                    </div>
+                    <label class="model-form-label" for="person-phone">Телефон</label>
+                    <div class="model-form-control">
+                        <input 
+                        class="modal-form-input" 
+                        type="tel" 
+                        name="person-phone" 
+                        id="person-phone" />
+                        <svg width="12" height="12" class="modal-form-icon">
+                            <use href="./images/icons.svg#icon-phone-black"></use>
+                        </svg>
+                    </div>
+                    <label class="model-form-label" for="person-email">Пошта</label>
+                    <div class="model-form-control">
+                        <input 
+                        class="modal-form-input" 
+                        type="email" name="person-email" id="person-email" />
+                        <svg width="12" height="12" class="modal-form-icon">
+                            <use href="./images/icons.svg#icon-email-black"></use>
+                         </svg>
+                    </div>
+                    <label class="model-form-label" for="comment">Коментар</label>
+                    <textarea class="modal-form-textarea" id="comment" name="comment" placeholder="Введіть текст"></textarea>
+
+                    <label class="model-form-terms-checkbox-label" for="checkbox-input">
+                        Погоджуюся з розсилкою та приймаю
+                        <a class="modal-link" href="#">Умови договору</a>
+                    <input 
+                    class="model-form-checkbox-input visually-hidden" 
+                    id="checkbox-input" 
+                    type="checkbox" 
+                    name="terms-checkbox">
+                    <span class="item-checked"></span> 
+                    </label>
+                    <button class="model-form-button" type="submit">
+                        <span class="model-form-button-text">
+                            Відправити
+                        </span>
+                    </button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
